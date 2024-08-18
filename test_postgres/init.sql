@@ -1,0 +1,6 @@
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    serial_number INTEGER NOT NULL,
+    message VARCHAR(128) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

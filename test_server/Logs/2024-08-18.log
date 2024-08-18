@@ -1,0 +1,50 @@
+13:01:27.258 Info [Request] Incoming request: POST /api/Message
+13:01:27.309 Error [General] Serial number is empty
+13:01:27.314 Info [Request] Outgoing response: 400 in 57ms
+13:01:55.780 Info [Request] Incoming request: POST /api/Message
+13:01:55.781 Error [General] Serial number is empty
+13:01:55.781 Info [Request] Outgoing response: 400 in 1ms
+13:04:12.950 Info [Request] Incoming request: POST /api/Message
+13:04:13.581 Info [Request] Outgoing response: 200 in 631ms
+14:34:45.389 Info [Request] Incoming request: POST /api/Message
+14:34:45.431 Error [General] Serial number is empty
+14:34:45.435 Info [Request] Outgoing response: 400 in 47ms
+14:34:53.515 Info [Request] Incoming request: POST /api/Message
+14:34:53.532 Info [Request] Outgoing response: 400 in 17ms
+14:34:56.015 Info [Request] Incoming request: POST /api/Message
+14:34:56.016 Info [Request] Outgoing response: 400 in 0ms
+14:34:56.255 Info [Request] Incoming request: POST /api/Message
+14:34:56.256 Info [Request] Outgoing response: 400 in 1ms
+14:34:56.438 Info [Request] Incoming request: POST /api/Message
+14:34:56.439 Info [Request] Outgoing response: 400 in 0ms
+14:34:56.644 Info [Request] Incoming request: POST /api/Message
+14:34:56.645 Info [Request] Outgoing response: 400 in 0ms
+15:39:10.491 Info [Request] Incoming request: POST /api/Message
+15:39:10.533 Error [SendMessage] Serial number is empty
+15:39:10.538 Info [Request] Outgoing response: 400 in 47ms
+15:39:16.900 Info [Request] Incoming request: POST /api/Message
+15:39:16.905 Info [AddMessage] Выполнение SQL-запроса для добавления сообщения: INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:39:16.905 Info [AddMessage] Параметры запроса: SerialNumber=123, Message=string, CreatedAt=18.08.2024 12:39:16
+15:39:16.907 Info [ExecuteNonQueryAsync] Выполнение команды (ExecuteNonQueryAsync): INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:39:16.971 Error [ExecuteNonQueryAsync] Ошибка при выполнении запроса (ExecuteNonQueryAsync): Этот хост неизвестен.. Запрос: INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:39:16.971 Warning [AddMessage] Не удалось добавить сообщение с SerialNumber=123
+15:39:16.974 Info [SendMessageAsync] Сериализованное сообщение: {"Id":0,"Message":"string","Date":"2024-08-18T12:39:16.9011767Z","SerialNumber":123}
+15:39:16.974 Info [BroadcastMessage] Broadcasting message: {"Id":0,"Message":"string","Date":"2024-08-18T12:39:16.9011767Z","SerialNumber":123}
+15:39:16.975 Info [SendMessageAsync] Сообщение с SerialNumber=123 отправлено через веб-сокет.
+15:39:16.975 Info [SendMessage] Message sent successfully
+15:39:16.983 Info [Request] Outgoing response: 200 in 83ms
+15:40:11.007 Info [Request] Incoming request: POST /api/Message
+15:40:11.008 Info [AddMessage] Выполнение SQL-запроса для добавления сообщения: INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:40:11.008 Info [ExecuteNonQueryAsync] Выполнение команды (ExecuteNonQueryAsync): INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:40:11.014 Error [ExecuteNonQueryAsync] Ошибка при выполнении запроса (ExecuteNonQueryAsync): Этот хост неизвестен.. Запрос: INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:40:11.014 Warning [AddMessage] Не удалось добавить сообщение с SerialNumber=123
+15:40:11.014 Info [SendMessageAsync] Сообщение с SerialNumber=123 отправлено через веб-сокет.
+15:40:11.015 Info [SendMessage] Message sent successfully
+15:40:11.015 Info [Request] Outgoing response: 200 in 7ms
+15:40:13.764 Info [Request] Incoming request: POST /api/Message
+15:40:13.764 Info [AddMessage] Выполнение SQL-запроса для добавления сообщения: INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:40:13.764 Info [ExecuteNonQueryAsync] Выполнение команды (ExecuteNonQueryAsync): INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:40:13.765 Error [ExecuteNonQueryAsync] Ошибка при выполнении запроса (ExecuteNonQueryAsync): Этот хост неизвестен.. Запрос: INSERT INTO messages (serial_number, message, created_at) VALUES (@serialNumber, @message, @createdAt)
+15:40:13.765 Info [SendMessageAsync] Сериализованное сообщение: {"Id":0,"Message":"string","Date":"2024-08-18T12:40:13.764779Z","SerialNumber":123}
+15:40:13.765 Info [SendMessageAsync] Сообщение с SerialNumber=123 отправлено через веб-сокет.
+15:40:13.766 Info [Request] Outgoing response: 200 in 1ms

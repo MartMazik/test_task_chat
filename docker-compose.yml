@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./test_postgres
+      dockerfile: Dockerfile
+    container_name: my_postgres
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password_1234
+      POSTGRES_DB: test_sql_database
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+
+  server:
+    build:
+      context: ./test_server
+      dockerfile: Dockerfile
+    container_name: my_server
+    ports:
+      - "5000:8080"
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
+  client:
+    build:
+      context: ./test_client
+      dockerfile: Dockerfile
+    container_name: my_client
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+    networks:
+      - mynetwork
+
+volumes:
+  postgres_data:
+
+networks:
+  mynetwork:
+    driver: bridge
