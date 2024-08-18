@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   db:
-    image: maxmartian/test_db_postgres:latest
+    build:
+      context: ./test_postgres
+      dockerfile: Dockerfile
     container_name: my_postgres
     environment:
       POSTGRES_USER: test_user
@@ -16,7 +18,9 @@ services:
       - mynetwork
 
   server:
-    image: maxmartian/test_server:latest
+    build:
+      context: ./test_server
+      dockerfile: Dockerfile
     container_name: my_server
     ports:
       - "5000:8080"
@@ -26,7 +30,9 @@ services:
       - mynetwork
 
   client:
-    image: maxmartian/test_client:latest
+    build:
+      context: ./test_client
+      dockerfile: Dockerfile
     container_name: my_client
     ports:
       - "3000:80"
